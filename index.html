@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>APIS at a glance</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/simple.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <script
+              src="https://code.jquery.com/jquery-3.2.1.min.js"
+              integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+              crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h2>Relation extraction in APIS</h2>
+                    <h3>matthias.schloegl@oeaw.ac.at</h3>
+                    <h3>https://apisdev.acdh.oeaw.ac.at</h3>
+                </section>
+                <section>
+                    <section>
+                        <ul>
+                            <li>Based on the "Austrian Biographical Dictionary" (ÖBL)</li>
+                            <li>~18.500 biographies of people who "had an impact" on - back then - Austrian soil and died between 1815 and 1955</li>
+                            <li>The APIS project intends to semantically enrich these biographies (relations to people, places etc. )</li>
+                            <li>..and use that data to research migration patterns.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <blockquote cite="https://apis.acdh.oeaw.ac.at/entities/entity/person/90074/detail" style="background: #f2f2f2">
+                        &ldquo;Stud. in Wien und Linz, legte 1795 in St. Florian die Ordensgelübde ab, 1797 Priesterweihe, arbeitete zuerst in der Seelsorge, dann als Prof. für Bibelstudium des Neuen und Alten Testamentes am Lyzeum in Linz, Dir. des Gymnasiums in Linz und Mitarbeiter der „Linzer Monatsschrift“. 1814–23 Kanzleidir. des Stiftes, 1818 Leiter des Stiftsdekanates, 1823 Propst, 1823–48 Generaldir. der o.ö. Gymnasien....&rdquo;
+                        </blockquote>
+                    </section>
+                    <section>
+                        <blockquote cite="https://apis.acdh.oeaw.ac.at/entities/entity/person/90074/detail"  style="background: #f2f2f2">
+                        &ldquo;Stud. in <a href="http://www.geonames.org/2761369/vienna.html">Wien</a> und <a href="http://sws.geonames.org/2772400/about.rdf">Linz</a>, legte 1795 in St. Florian die Ordensgelübde ab, 1797 Priesterweihe, arbeitete zuerst in der Seelsorge, dann als Prof. für Bibelstudium des Neuen und Alten Testamentes am Lyzeum in Linz, Dir. des Gymnasiums in Linz und Mitarbeiter der „Linzer Monatsschrift“. 1814–23 Kanzleidir. des Stiftes, 1818 Leiter des Stiftsdekanates, 1823 Propst, 1823–48 Generaldir. der o.ö. Gymnasien....&rdquo;
+                        </blockquote>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>ideas</h3>
+                        <ul>
+                            <li>simple data model >> serialize later in various formats/data models (karma, ontop)</li>
+                            <li>rock solid and widely used software stack >> less bugs, better documented, easier to develop</li>
+                            <li>hybrid approach >> researchers and tools use the same webtool/database</li>
+                        </ul>
+                    </section>
+                    <section>
+                            <h3>datamodel</h3>
+                            <ul style="font-size: 0.8em">
+                                <li>5 core entities: people, places, institutions, events and works</p>
+                                <li>all interrelated >> relations contain a type (SKOS), a time span and some free text fields</p>
+                                <li>every entity type can have several text types attached</p>
+                                <li>every annotation is linked to an annotation project, a user and a entity or relation >> allows for multiple annotations (e.g. different tools) of one and the same text</p>
+                                <li>every change of an object is serialized to json and stored with user and timestamp (revisioning)</p>
+                           </ul>
+                    </section>
+                    <section>
+                            <h3>datamodel II</h3>
+                        <img src="images/datamodel_graph.png">
+                    </section>
+                    <section>
+                        <h3>software</h3>
+                        <ul>
+                            <li>Django (Python Web Development Framework</li>
+                            <li>MySQL (Database)</li>
+                            <li>Stanbol (Reference resources)</li>
+                            <li>spacy and Gate for NLP</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                      <h3>The App I</h3>
+                        <span style="float: left; width: 28%">
+                            <ul style="font-size: 0.8em">
+                                <li>customizeable filters and lists</li>
+                                <li>download of filtered lists in various formats</li>
+                                <li>creating new entities from customizeable reference resources</li>
+                            </ul>
+                        </span>
+                        <img style="float: right; width: 70%" src="images/list_views.png"></img>
+                    </section>
+                    <section>
+                      <h3>The App II</h3>
+                        <span style="float: left; width: 28%">
+                            <ul style="font-size: 0.8em">
+                                <li>metadata of entity on the left</li>
+                                <li>link to other entities on the right</li>
+                                <li>auto-import of entities from reference resources</li>
+                            </ul>
+                        </span>
+                        <img style="float: right; width: 70%" src="images/detail_view_v1.png"></img>
+                    </section>
+                    <section>
+                      <h3>The App III</h3>
+                        <span style="float: left; width: 28%">
+                            <ul style="font-size: 0.8em">
+                                <li>annotation of text</li>
+                                <li>annotation projects</li>
+                                <li>filter annotations to show</li>
+                            </ul>
+                        </span>
+                        <img style="float: right; width: 70%" src="images/annotation_v1.png"></img>
+                    </section>
+                    <section>
+                      <h3>The App IV</h3>
+                        <span style="float: left; width: 28%">
+                            <ul style="font-size: 0.8em">
+                                <li>iteratively create network</li>
+                                <li>add whole collections</li>
+                                <li>export to graphml/json</li>
+                            </ul>
+                        </span>
+                        <img style="float: right; width: 70%" src="images/network_viz.png"></img>
+                    </section>
+                </section>
+                <section>
+                    <h3>APIS example biography</h3>
+                </section>
+                <section>
+                    <h3>(semi)automatic relation extraction</h3>
+                    <ul>
+                        <li>take advantage of biographies nature</li>
+                        <li>researchers annotate subset of bios</li>
+                        <li>train model on these annotations</li>
+                        <li>use the model to annotate more data</li>
+                        <ul>
+                            <li>find named entities (e.g. places)</li>
+                            <li>use the parse tree to find related words</li>
+                            <li>bag of words text classifier to extract relation</li>
+                        </ul>
+                    </ul>
+                </section>
+                <section>
+                    <h3>The parse tree</h3>
+                    <img src="images/displacy.svg">
+                </section>
+                <section>
+                    <section>
+                        <h3>neuronal network I</h3>
+                        <img src="images/neuronal_net_v3_step1.svg">
+                    </section>
+                    <section>
+                        <h3>neuronal network II</h3>
+                        <img src="images/neuronal_net_v3_step2.svg">
+                    </section>
+                    <section>
+                        <h3>neuronal network III</h3>
+                        <img src="images/neuronal_net_v3_step3.svg">
+                    </section>
+                </section>
+                <section style="margin-left: 5%; width: 90%;">
+                  <h3>Type of relations in training set</h3>
+                  <img src="images/chart_v1.png">
+                </section>
+                <section>
+                    <section>
+                        <h3>APIS relation extraction, example places</h3>
+                        <ul>
+                            <li>spaCy NLP processing</li>
+                            <li>search for correct NE type</li>
+                            <li>If exists >> climb up the parse tree</li>
+                            <li>Extract all words acccording to POS tag rules</li>
+                        </ul>
+                        <p>>> results in vector: [112, 144554, 4434232]</p>
+                        <p>>> transformed to binary matrix (bag of words approach)</p>
+                    </section>
+                    <section>
+                        <h3>Problems/limitations</h3>
+                        <ul>
+                            <li>Abbreviations >> Neffe von ¿Franz Anton d. J. Gf. v. T. u. H. und ¿Leo Gf. v. T. u. H.</li>
+                            <li>Implicit annotations >> was forced to leave Vienna ... moved to London</li>
+                            <li>Inter-Annotator agreement even between humans not great (>25% disagreement)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Accuracy</h3>
+                        <ul>
+                            <li>~85% on training data</li>
+                            <li>~65% on evaluation data >> improves to ~72% when short examples are removed</li>
+                            <li>~65% <b>disagreement</b> with human annotator</li>
+                            <ul>
+                                <li>POS tagger and NER struggling with ÖBL specific language</li>
+                                <li>Trainings data live from ongoing projects >> no clean data for training</li>
+                            </ul>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <h2>Thanks!</h2>
+                    <p>matthias.schloegl@oeaw.ac.at / https://github.com/acdh-oeaw/apis-core / https://apisdev.acdh.oeaw.ac.at</p>
+                </section>
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                    width: 960,
+                    height: 700,
+
+    // Factor of the display size that should remain empty around the content
+                    margin: 0.1,
+
+    // Bounds for smallest/largest possible scale to apply to content
+                    minScale: 0.2,
+                    maxScale: 1.5,
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/chart/Chart.min.js' },
+                    { src: 'plugin/chart/csv2chart.js' },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+        <style type="text/css">
+    /* 1. Style header/footer <div> so they are positioned as desired. */
+    #header-left {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+    }
+    #header-right {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+    }
+    #footer-left {
+        position: absolute;
+        bottom: 2%;
+        left: 2%;
+    }
+    #footer-right {
+        position: absolute;
+        bottom: 2%;
+        right: 10%;
+    }
+    video.video-apis {
+        left: 30%;
+        opacity: 0.8;
+        float: right;
+        width: 70%;
+        padding-bottom: 20px;
+    }
+
+</style>
+
+<!-- 2. Create hidden header/footer <div> -->
+<div id="hidden" style="display:none;">
+    <div id="header">
+        <div id="footer-left"><img src="images/logo_acdh_new.png" width="100"/></div>
+        <div id="footer-right"><small>matthias.schloegl@oeaw.ac.at</small></div>
+    </div>
+</div>
+
+<!--<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>-->
+<script type="text/javascript">
+    // 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+    var header = $('#header').html();
+    if ( window.location.search.match( /print-pdf/gi ) ) {
+        Reveal.addEventListener( 'ready', function( event ) {
+            $('.slide-background').append(header);
+        });
+    }
+    else {
+        $('div.reveal').append(header);
+   }
+</script>
+    </body>
+</html>
