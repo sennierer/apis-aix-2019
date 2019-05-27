@@ -20,6 +20,8 @@ Aix-en-Provance, France, 2019
 ### Thanks!
 [https://apis.acdh-dev.oeaw.ac.at](https://apis.acdh-dev.oeaw.ac.at)
 
+[https://histogis.acdh.oeaw.ac.at](https://histogis.acdh.oeaw.ac.at)
+
 [https://github.com/acdh-oeaw/apis-core](https://github.com/acdh-oeaw/apis-core)
 
-
+[https://gitpitch.com/sennierer/apis-aix-2019/master#/](https://gitpitch.com/sennierer/apis-aix-2019/master#/)
