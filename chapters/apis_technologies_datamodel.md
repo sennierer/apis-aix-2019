@@ -86,3 +86,11 @@ APIS at a glance VI - edit view, annotations
 @snap[north-east template-note text-gray]
 APIS at a glance VII - edit view, annotations menu
 @snapend
+
++++
+@snap[midpoint span-100]
+![Networkviz](images/network_viz.png)
+@snapend
+@snap[north-east template-note text-gray]
+APIS at a glance VIII - network viz
+@snapend
