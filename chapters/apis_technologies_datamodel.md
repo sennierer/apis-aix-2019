@@ -22,6 +22,12 @@
 APIS technical aspects
 @snapend
 
+---
+
+@snap[midpoint span-100]
+![APIS Datamodel](images/datamodel_graph.png)
+@snapend
+
 ---?image=template/img/bg/blue.jpg&position=left&size=30% 100%
 @title[Sidebar + Heading]
 
@@ -48,6 +54,35 @@ APIS technical aspects
 @snap[north-east template-note text-gray]
 APIS technical aspects
 @snapend
----
 
-@uml[midpoint bg-white ](uml/datamodel_apis.puml)
++++
+@snap[midpoint span-100]
+![Edit view APIS](images/apis_screenshots_person_edit.png)
+@snapend
+@snap[north-east template-note text-gray]
+APIS at a glance IV - edit view
+@snapend
+
++++
+@snap[midpoint span-100]
+![Edit view APIS II](images/apis_screenshots_person_edit_II.png)
+@snapend
+@snap[north-east template-note text-gray]
+APIS at a glance V - edit view
+@snapend
+
++++
+@snap[midpoint span-100]
+![Edit view APIS II](images/apis_annotations_I.png)
+@snapend
+@snap[north-east template-note text-gray]
+APIS at a glance VI - edit view, annotations
+@snapend
+
++++
+@snap[midpoint span-100]
+![Edit view APIS II](images/apis_annotations_II.png)
+@snapend
+@snap[north-east template-note text-gray]
+APIS at a glance VII - edit view, annotations menu
+@snapend

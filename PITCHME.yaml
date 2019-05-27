@@ -25,14 +25,14 @@ theme-override : template/css/PITCHME.css
 # Logo Setting
 # https://gitpitch.com/docs/settings/logo
 #
-logo : template/img/logo.png
+logo : images/logo_acdh_new.png
 logo-position : top-left
 
 #
 # Footnote Setting
 # Doc: https://gitpitch.com/docs/settings/footnote
 #
-footnote : "API - Relation extraction - DHA 2017, Innsbruck, Austria"
+footnote : "APIS - A(ustrian) Prosopographical Information System,  Aix-en-Provence / France / 5-2019"
 
 #
 # Highlight (Code) Setting
