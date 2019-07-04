@@ -1,12 +1,16 @@
-+++?image=template/img/bg/blue.jpg&position=left&size=30% 100%
++++?color=linear-gradient(180deg, #5289F7 18%, white 18%)
 @title[Sidebar + Heading]
 
-@snap[west text-white span-20]
-@size[1em](Datamodel)
+@snap[north h3-white]
+### Datamodel
 @snapend
 
-@snap[east list-content-concise span-75 text-08]
-@ol
+@snap[north-east]
+@css[title-note text-white](APIS Technical Aspects)
+@snapend
+
+@snap[south span-100]
+@ol[list-spaced-bullets list-boxed-bullets text-08]
 - 5 core entities: Person, Place, Institution, Work, Event
 - all entities can be interrelated
 - fixed set of relation attributes (mini-event)
@@ -15,11 +19,6 @@
 - annotations organized in projects
 - entities organized in collections
 @olend
-<br><br>
-@snapend
-
-@snap[north-east template-note text-gray]
-APIS technical aspects
 @snapend
 
 ---
@@ -28,15 +27,19 @@ APIS technical aspects
 ![APIS Datamodel](images/datamodel_graph.png)
 @snapend
 
----?image=template/img/bg/blue.jpg&position=left&size=30% 100%
++++?color=linear-gradient(180deg, #5289F7 18%, white 18%)
 @title[Sidebar + Heading]
 
-@snap[west text-white span-20]
-@size[1em](Tool)
+@snap[north h3-white]
+### Tool
 @snapend
 
-@snap[east list-content-concise span-75 text-08]
-@ul
+@snap[north-east]
+@css[title-note text-white](APIS Technical Aspects)
+@snapend
+
+@snap[south span-100]
+@ul[text-09]
 - list views for entities and relations
 - detail and create views fo entities
 - autocompletes for entities:
@@ -48,18 +51,13 @@ APIS technical aspects
 	+ stored in projects
 	+ >> multiple annotations possible
 @ulend
-<br><br>
-@snapend
-
-@snap[north-east template-note text-gray]
-APIS technical aspects
 @snapend
 
 +++
 @snap[midpoint span-100]
 ![Edit view APIS](images/apis_screenshots_person_edit.png)
 @snapend
-@snap[north-east template-note text-gray]
+@snap[north-east title-note text-gray]
 APIS at a glance IV - edit view
 @snapend
 
@@ -67,7 +65,7 @@ APIS at a glance IV - edit view
 @snap[midpoint span-100]
 ![Edit view APIS II](images/apis_screenshots_person_edit_II.png)
 @snapend
-@snap[north-east template-note text-gray]
+@snap[north-east title-note text-gray]
 APIS at a glance V - edit view
 @snapend
 
@@ -75,7 +73,7 @@ APIS at a glance V - edit view
 @snap[midpoint span-100]
 ![Edit view APIS II](images/apis_annotations_I.png)
 @snapend
-@snap[north-east template-note text-gray]
+@snap[north-east title-note text-gray]
 APIS at a glance VI - edit view, annotations
 @snapend
 
@@ -83,14 +81,14 @@ APIS at a glance VI - edit view, annotations
 @snap[midpoint span-100]
 ![Edit view APIS II](images/apis_annotations_II.png)
 @snapend
-@snap[north-east template-note text-gray]
+@snap[north-east title-note text-gray]
 APIS at a glance VII - edit view, annotations menu
 @snapend
 
 +++
-@snap[midpoint span-100]
+@snap[midpoint span-92]
 ![Networkviz](images/network_viz.png)
 @snapend
-@snap[north-east template-note text-gray]
+@snap[north-east title-note text-gray]
 APIS at a glance VIII - network viz
 @snapend

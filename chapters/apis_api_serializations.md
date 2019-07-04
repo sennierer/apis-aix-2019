@@ -1,30 +1,37 @@
 +++
-@snap[midpoint text-black span-100]
-<h2>On top of base serialization, renderers to various formats/ontologies</h2>
+@snap[midpoint span-100]
+## On top of base serialization, renderers to various formats/ontologies
 @snapend
 
 ---
-@snap[span-100 text-08]
 @code[xml](data/tei_serialization.xml)
+@snap[south span-100 text-09]
 @[19-27](Metadata)
 @[32-36](Relations to other entities)
 @[51](LOD links)
 @snapend
 
----
+---?color=linear-gradient(180deg, #5289F7 18%, white 18%)
+
+@snap[north h3-white]
+### More To Come
+@snapend
+
 @snap[midpoint span-100]
-<h3>More to come:</h3>
-@ul
+@ul[list-spaced-bullets]
 - Links to vocabularie entries
 - Annotation of texts
 - ...
 @ulend
 @snapend
 
----
-@snap[midpoint span-100]
-<h3>Basic CIDOC CRM serialization:</h3>
-@ul
+---?color=linear-gradient(180deg, #5289F7 18%, white 18%)
+@snap[north span-100 h3-white]
+### Basic CIDOC CRM Serialization
+@snapend
+
+@snap[south span-100]
+@ul[list-spaced-bullets text-09]
 - Name
 - LOD Links
 - Place of Birth
@@ -35,19 +42,23 @@
 @snapend
 
 ---
-@snap[span-100 text-08]
 @code[XML](data/cidoc_serialization_v2.xml)
+@snap[south span-100 text-09]
 @[28-33](Basic metadata)
 @[51-57](Death event)
 @[13-20](related place)
 @[8-12](time span)
 @snapend
 
----
-@snap[midpoint span-100]
-<h3>ProsopogrAPhI serialization:</h3>
-@ul
-- [ProsopogrAPhi](https://github.com/GVogeler/prosopogrAPhI) 
+---?color=linear-gradient(180deg, #5289F7 18%, white 18%)
+
+@snap[north span-100 h3-white]
+### ProsopogrAPhI Serialization
+@snapend
+
+@snap[south span-100]
+@ul[list-spaced-bullets text-09]
+- [ProsopogrAPhi](https://github.com/GVogeler/prosopogrAPhI)
 - Created by Georg Vogeler & colleagues
 - Based on the idea of factoids
 - easy to implement while allowing for some matching
@@ -57,8 +68,8 @@
 @snapend
 
 ---
-@snap[span-100 text-08]
 @code[json](data/prosop_serialization.json)
+@snap[south span-100 text-09]
 @[4-16](Metadata on person and source)
 @[17,22-30](list of statenments about person, e.g. birth)
 @[54-77](several statmentContents in one statement)

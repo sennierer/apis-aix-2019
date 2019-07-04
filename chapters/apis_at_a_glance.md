@@ -1,12 +1,16 @@
-+++?image=template/img/bg/blue.jpg&position=left&size=30% 100%
++++?color=linear-gradient(180deg, #5289F7 18%, white 18%)
 @title[Sidebar + Heading]
 
-@snap[west text-white]
-@size[1.5em](1. ÖBL)
+@snap[north h3-white]
+### 1. OBL
 @snapend
 
-@snap[east list-content-concise span-70]
-@ol
+@snap[north-east]
+@css[title-note text-white](ÖBL at a glance)
+@snapend
+
+@snap[south span-100]
+@ol[list-boxed-bullets custom-spaced-bullets]
 - Started in 1955
 - 13 volumes / 66 issues published so far
 - ~19.000 biographies
@@ -15,87 +19,81 @@
 - were born after 1815 and
 - died before 1955
 @olend
-<br><br>
 @snapend
 
-@snap[north-east template-note text-gray]
-ÖBL at a glance
++++?color=linear-gradient(180deg, #5289F7 18%, white 18%)
+@title[Sidebar + Heading]
+
+@snap[north h3-white]
+### 2. APIS
 @snapend
 
-+++?image=template/img/bg/blue.jpg&position=left&size=30% 100%
-@snap[west text-white]
-@size[1.5em](2. APIS)
+@snap[north-east]
+@css[title-note text-white](APIS at a glance)
 @snapend
 
-@snap[east list-content-concise span-70]
-@ol
+@snap[south span-100]
+@ol[list-boxed-bullets list-spaced-bullets]
 - Austrian Prosopographical Information System
 - funded by the "Nationalstiftung"
 - project end March 2020
 - Goal is to semantically enrich ÖBL biographies
-- collaborative project between 3 ÖAW institutes 
+- collaborative project between 3 ÖAW institutes
 @olend
-<br><br>
 @snapend
 
-@snap[north-east template-note text-gray]
-APIS at a glance
++++?color=linear-gradient(180deg, #5289F7 18%, white 18%)
+
+@snap[north h3-white]
+### 3. Ideas
 @snapend
 
-+++?image=template/img/bg/blue.jpg&position=left&size=30% 100%
-@snap[west text-white]
-@size[1.5em](3. Ideas)
+@snap[north-east]
+@css[title-note text-white](APIS at a glance II)
 @snapend
 
-@snap[east list-content-concise span-70]
-@ol
+@snap[south span-100]
+@ol[list-boxed-bullets list-spaced-bullets]
 - simple data model >> serialize later in various formats/data models
 - rock solid and widely used software stack >> less bugs, better documented, easier to develop
 - hybrid approach >> researchers and tools use the same webtool/database
 @olend
-<br><br>
 @snapend
 
-@snap[north-east template-note text-gray]
-APIS at a glance II
++++?color=linear-gradient(180deg, #5289F7 18%, white 18%)
+
+@snap[north h3-white]
+### 4. Stack
 @snapend
 
-+++?image=template/img/bg/blue.jpg&position=left&size=30% 100%
-@snap[west text-white]
-@size[1.5em](4. Stack)
+@snap[north-east]
+@css[title-note text-white](APIS at a glance III)
 @snapend
 
-@snap[east list-content-concise span-70]
-@ol
+@snap[south span-100]
+@ol[list-boxed-bullets list-spaced-bullets]
 - Django (Python Web Development Framework
 - MySQL (Database)
 - Stanbol (Reference resources)
 - spacy and Gate for NLP
 @olend
-<br><br>
 @snapend
 
-@snap[north-east template-note text-gray]
-APIS at a glance III
-@snapend
-+++?image=template/img/bg/blue.jpg&position=left&size=30% 100%
-@snap[west text-white]
-@size[1.5em](5. APIS)
-<br>
-@size[1em](...so far)
++++?color=linear-gradient(180deg, #5289F7 18%, white 18%)
+
+@snap[north h3-white text-white]
+### 5. APIS
 @snapend
 
-@snap[east list-content-concise span-70]
-@ol
+@snap[north-east]
+@css[title-note text-white](APIS at a glance IV)
+@snapend
+
+@snap[south span-100]
+@ol[list-boxed-bullets list-spaced-bullets]
 - ~ 30.000 entities
 - ~ 90.000 relations
 - ~ 19.000 annotations
 - ~ 150 mb of data
 @olend
-<br><br>
 @snapend
-
-@snap[north-east template-note text-gray]
-APIS at a glance IV
-@snapend
-

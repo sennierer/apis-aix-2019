@@ -1,32 +1,32 @@
-+++?image=template/img/bg/blue.jpg&position=left&size=30% 100%
-
++++?color=linear-gradient(180deg, #5289F7 18%, white 18%)
 @title[Sidebar + Heading]
 
-@snap[west text-white]
-@size[1.5em](APIs)
+@snap[north h3-white]
+### APIs
 @snapend
 
-@snap[east list-content-concise span-70]
-@ul
+@snap[north-east]
+@css[title-note text-white](APIS Technical Aspects II)
+@snapend
+
+@snap[south span-100]
+@ul[list-spaced-bullets]
 - Hyperlinked API for retrieval of atomic data
 - >> e.g. network visualization
 - 2nd API for retrieval of every information on one entity
 - >> used for serializing data to various formats
 @ulend
-<br><br>
-@snapend
-
-@snap[north-east template-note text-gray]
-APIS technical aspects II
 @snapend
 
 ---
-@snap[span-100 text-08]
+
 @code[json](data/api2_json.json)
-@[4-6,10-11](metadata)
-@[18,21-23,25](Labels)
-@[57,75-76](profession labels)
-@[383-384,386](relations)
+
+@snap[south span-100]
+@[4-6,10-11,zoom-18](metadata)
+@[18,21-23,25,zoom-14](Labels)
+@[57,75-76,zoom-10](profession labels)
+@[383-384,386,zoom-13](relations)
 @[388-398](annotations)
-@[400-405](revisions)
+@[400-405,zoom-13](revisions)
 @snapend
