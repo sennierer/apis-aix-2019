@@ -16,12 +16,17 @@ Aix-en-Provance, France, 2019
 ---?include=chapters/apis_api_serializations.md
 ---?include=chapters/histogis.md
 ---?include=chapters/apis_relation_extraction.md
----
+
+---?color=linear-gradient(180deg, #5289F7 18%, white 18%)
+
+@snap[north h3-white]
 ### Thanks!
+@snapend
+
 [https://apis.acdh-dev.oeaw.ac.at](https://apis.acdh-dev.oeaw.ac.at)
 
 [https://histogis.acdh.oeaw.ac.at](https://histogis.acdh.oeaw.ac.at)
 
-[https://github.com/acdh-oeaw/apis-core](https://github.com/acdh-oeaw/apis-core)
+[github.com/acdh-oeaw/apis-core](https://github.com/acdh-oeaw/apis-core)
 
-[https://gitpitch.com/sennierer/apis-aix-2019/master#/](https://gitpitch.com/sennierer/apis-aix-2019/master#/)
+[gitpitch.com/sennierer/apis-aix-2019/master](https://gitpitch.com/sennierer/apis-aix-2019/master)

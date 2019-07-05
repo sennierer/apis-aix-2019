@@ -13,7 +13,7 @@ published : false
 # Theme Setting
 # Doc: https://gitpitch.com/docs/settings/theme
 #
-theme : simple
+theme : template
 
 #
 # Theme-Override Setting
@@ -61,4 +61,3 @@ transition : none
 title : "Relation extraction in APIS"
 description : "Relation extraction developed in the context of the APIS project."
 thumbnail : https://gitpitch.com/gpimg/the-template-thumb.jpg
-
